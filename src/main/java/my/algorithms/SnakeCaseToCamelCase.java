@@ -1,5 +1,10 @@
-package pack;
+package my.algorithms;
 
+/**
+ * Code to convert snake_case to camelCase
+ *
+ * @author github.com/saikatroy038
+ */
 public class SnakeCaseToCamelCase {
 
     // considering word is always valid snake case

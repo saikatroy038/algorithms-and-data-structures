@@ -1,6 +1,11 @@
-package pack;
+package my.algorithms;
 
-public class LongestPalindromSubstring {
+/**
+ * Longest palindromic substring in a string.
+ *
+ * @author github.com/saikatroy038
+ */
+public class LongestPalindromeSubstring {
 
     public static void main(String[] args) {
         System.out.println(longestPalindrome("abccb"));

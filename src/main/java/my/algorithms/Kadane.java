@@ -1,9 +1,14 @@
-package pack;
+package my.algorithms;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
+
+/**
+ * Kadane's algorithm to find maximum sum sub-array in an array.  <br />
+ * O(n) time complexity. <br />
+ * O(1) space complexity. <br />
+ *
+ * @author github.com/saikatroy038
+ */
 public class Kadane {
 
     public static int[] maxSumInSubArray(int[] arr) {

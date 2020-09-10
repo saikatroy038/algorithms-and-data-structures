@@ -1,6 +1,11 @@
-package pack;
+package my.algorithms;
 
-public class Kanpsack01DP {
+/**
+ * 0/1 Knapsack problem. <br />
+ *
+ * @author github.com/saikatroy038
+ */
+public class Knapsack01Optimised {
 
     private static class Item {
         int weight;
@@ -13,7 +18,7 @@ public class Kanpsack01DP {
     }
 
 
-    public static int maxProfitRecur(int[] weights, int[] profits, int capacity) {
+    private static int maxProfitRecur(int[] weights, int[] profits, int capacity) {
         Item[] items = new Item[weights.length];
         for (int i = 0; i < items.length; i++) {
             items[i] = new Item(weights[i], profits[i]);
@@ -22,7 +27,14 @@ public class Kanpsack01DP {
         return maxProfit(items, 0, capacity);
     }
 
-
+    /**
+     * Using brute force. <br />
+     *
+     * <b> Should be used when w.length << capacity. </b> <br/>
+     *
+     * time complexity O(2^n). n -> w.length <br/>
+     * space complexity O(1) <br />
+     */
     private static int maxProfit(Item[] items, int start, int capacity) {
         for (int i = start; i < items.length; i++) {
             if (items[i].weight > capacity) {
@@ -36,22 +48,29 @@ public class Kanpsack01DP {
         return 0;
     }
 
+    /**
+     *  Code to decide whether to use dynamic programming or brute force.
+     */
     public static int maxProfit(int[] w, int[] p, int capacity) {
         long stepsRecur = (long) Math.pow(2, w.length);
         long stepsDp = w.length * capacity;
 
-        System.out.println("R = " + stepsRecur + ", DP = " + stepsDp);
-
         if (stepsRecur <= stepsDp) {
-            System.out.println("R");
             return maxProfitRecur(w, p, capacity);
         } else {
-            System.out.println("DP");
             return maxProfitDp(w, p, capacity);
         }
     }
 
-    public static int maxProfitDp(int[] w, int[] p, int capacity) {
+    /**
+     * Using dynamic programming. <br />
+     *
+     * <b> Should be used when w.length >> capacity. </b> <br/>
+     *
+     * time complexity O(capacity * w.length) <br/>
+     * space complexity O(capacity * w.length) <br />
+     */
+    private static int maxProfitDp(int[] w, int[] p, int capacity) {
         int[][] profits = new int[w.length + 1][capacity + 1];
 
         for (int i = 0; i <= w.length; i++) {
@@ -74,8 +93,6 @@ public class Kanpsack01DP {
         int val[] = new int[] { 60, 100, 120, 150, 200, 300, 500, 1000, 1100, 1211 };
         int wt[] = new int[] { 10, 20, 30, 40, 50, 80, 100, 300, 350, 353 };
         int W = 100;
-
-
 
         System.out.println(maxProfit(wt, val, W));
     }

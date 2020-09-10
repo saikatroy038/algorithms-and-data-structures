@@ -1,9 +1,19 @@
-package pack;
+package my.algorithms;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Knapsack {
+/**
+ * 0/1 Knapsack problem using recursive brute force. <br />
+ *
+ * time complexity O(2^n) <br />
+ * space complexity O(1) <br />
+ *
+ * <b>Can be used for smaller values of n</b> <br/>
+ *
+ * @author github.com/saikatroy038
+ */
+public class Knapsack01 {
 
     private static class Item {
         int weight;

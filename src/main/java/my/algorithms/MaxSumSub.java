@@ -1,5 +1,13 @@
-package pack;
+package my.algorithms;
 
+/**
+ * Max sum of sub-array in an array using divide and conquer. <br />
+ * time complexity O(nlog(n)) <br />
+ *
+ * Kadane's algorithm provides better complexity.
+ *
+ * @author github.com/saikatroy038
+ */
 public class MaxSumSub {
 
     public static int maxSumOfSubArray(int[] nums, int start, int end) {

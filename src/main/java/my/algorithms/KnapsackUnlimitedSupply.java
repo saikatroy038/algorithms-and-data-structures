@@ -1,5 +1,10 @@
-package pack;
+package my.algorithms;
 
+/**
+ * Recursive brute force approach for 0/1 Knapsack problem with unlimited supplies.
+ *
+ * @author github.com/saikatroy038
+ */
 public class KnapsackUnlimitedSupply {
 
     private static class Item {

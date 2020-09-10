@@ -1,9 +1,15 @@
-package pack;
+package my.algorithms;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-// only positive numbers
+/**
+ * Maximum number of sub-arrays with sum less than given value. <br />
+ *
+ * Note: the code has a bug which needs to be fixed.
+ *
+ * @author github.com/saikatroy038
+ */
 public class SubArraysSumLessThan {
 
     public static int countSubArraysSumLessThan(int arr[], int start, int end, int k) {
