@@ -2,6 +2,7 @@ package my.algorithms;
 
 import java.util.TreeSet;
 
+// TODO sliding window approach
 public class MaxInEachSubArraysOfFixedSize {
 
     /**
